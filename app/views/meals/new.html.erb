@@ -1,0 +1,32 @@
+<h1> Create a new meal </h1>
+<h2> Just try not to eat too much of chocolate </h2>
+<h2> Everything in moderation! </h2> 
+
+<%= form_for(@meal) do |f| %>
+    <%= f.label :name, "What are you eating today?" %>
+    <%= f.text_field :name %>
+    <br></br>
+
+    <%= hidden_field_tag "meal[user_id]", @current_user.id  %>
+
+    <br></br>
+
+    <%= f.label :calories, "Calorie count:" %>
+    <%= f.text_field :calories %>
+
+    <br></br>
+
+    <%= f.label :serving, "Serving count:" %>
+    <%= f.text_field :serving %>
+
+    
+    <p> What diet is it? <%= f.collection_select :diet_id, Diet.all,:id,:name, include_blank: true, :selected => params[:did] %> </p> 
+    <br></br>
+
+    <%= f.submit "Create my meal", class: "btn btn-primary" %>
+ <% end %>
+
+ 
+ <%= link_to "Create a new workout", new_workout_path %> 
+ 
+ <%= link_to "Log out", logout_path %>

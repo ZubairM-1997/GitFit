@@ -1,0 +1,16 @@
+<h1> You are now viewing all <%= @muscle_group.muscle_name %> workouts </h1>
+
+<% @workouts.each do |workout| %>
+        <h2> Name : <%= workout.name %> </h2>
+        <h3> Sets : <%= workout.sets %> </h3>
+        <h3> Reps : <%= workout.reps %> </h3>
+        <%= button_to "Delete workout", workout, :method => :delete %>
+        <br></br> 
+<% end %> 
+
+
+<%= link_to "Create a new workout", new_workout_path(:mid => @muscle_group.id) %> 
+<br></br>
+<%= link_to "Create a new meal", new_meal_path %>
+<br></br>
+<%= link_to "Log out", logout_path %>

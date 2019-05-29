@@ -1,0 +1,15 @@
+<h1> Choose what you want to work out </h1> 
+<% @muscle_groups.each do |muscle| %>
+    <%= link_to muscle.muscle_name, muscle %>
+    <br></br>
+<% end %>
+
+<br></br>
+<br></br>
+<br></br>
+
+<%= link_to "Create a new meal", new_meal_path %>
+<br></br>
+<%= link_to "Create a new workout", new_workout_path %> 
+<br></br>
+<%= link_to "Log out", logout_path %>

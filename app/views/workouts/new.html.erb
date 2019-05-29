@@ -1,0 +1,29 @@
+<h1> Create a workout </h1>
+<h2> Try not to overtrain </h2>
+<h2> Everything in moderation! </h2> 
+
+<%= form_for(@workout) do |f| %>
+    <%= f.label :name, "What do you call this workout?" %>
+    <%= f.text_field :name %>
+    <br></br>
+    <%= hidden_field_tag "workout[user_id]", @current_user.id  %>   
+    <br></br>
+
+    <%= f.label :sets, "How many sets?" %>
+    <%= f.text_field :sets %>
+    <br></br>
+
+    <%= f.label :reps, "How many reps?" %>
+    <%= f.text_field :reps %>
+    <br></br>
+    
+    <p> What muscle are you working out? <%= f.collection_select :muscle_group_id, MuscleGroup.all,:id,:muscle_name, include_blank: true, :selected => params[:mid]  %> </p> 
+    <br></br>
+
+    <%= f.submit "Create my workout", class: "btn btn-primary" %>
+ <% end %>
+
+
+ <%= link_to "Create a new meal", new_meal_path %>
+ <br></br>
+ <%= link_to "Log out", logout_path %>

@@ -1,0 +1,44 @@
+<h1> Are you ready to GitFit? </h1>
+<h2> Sign up below to get started </h2> 
+
+<%= form_for(@user) do |f| %>
+    <%= f.label :name, "Enter your name:" %>
+    <%= f.text_field :name %>
+    <br></br>
+
+    <%= f.label :email, "Enter your email:" %>
+    <%= f.email_field :email %>
+    <br></br>
+
+    <%= f.label :weight, "Enter your weight in kg:" %>
+    <%= f.text_field :weight %>
+    <br></br>
+
+    <%= f.label :goal_weight, "Enter your goal weight in kg:" %>
+    <%= f.text_field :goal_weight %>
+    <br></br>
+
+    <%= f.label :height, "Enter your height in cm :" %>
+    <%= f.text_field :height %>
+    <br></br>
+
+    <%= f.label :age, "Enter your age :" %>
+    <%= f.text_field :age %>
+    <br></br>
+
+    <%= f.label :gender, "What is your gender? :" %>
+    <%= f.text_field :gender %>
+    <br></br>
+
+    <%= f.label :password, "Create a unique password:" %>
+    <%= f.password_field :password %>
+    <br></br>
+
+    <%= f.label :password_confirmation, "Confirm your password:" %>
+    <%= f.password_field :password_confirmation %>
+    <br></br>
+
+    <%= f.submit "Create my account", class: "btn btn-primary" %>
+<% end %>
+
+<p> Already have an account? <%= link_to "Welcome Back!", sessions_new_path %> </p>

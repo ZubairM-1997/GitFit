@@ -1,0 +1,15 @@
+<h1> Select what diet you prefer </h1> 
+<% @diets.each do |diet| %>
+    <%= link_to diet.name, diet %>
+    <br></br>
+<% end %>
+
+<br></br>
+<br></br>
+<br></br>
+
+<%= link_to "Create a new meal", new_meal_path %>
+<br></br>
+<%= link_to "Create a new workout", new_workout_path %> 
+<br></br>
+<%= link_to "Log out", logout_path %>

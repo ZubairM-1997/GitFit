@@ -1,0 +1,21 @@
+<h1> You are now viewing all <%= @diet.name %> meals </h1>
+
+<% @meals.each do |meal| %>
+        <h2> Name : <%= meal.name %> </h2>
+        <h3> Calories : <%= meal.calories %> </h3>
+        <h3> Servings : <%= meal.serving%> </h3>
+        <h3> Total Calories of Meal : <%= meal.calories * meal.serving %> </h3>
+        <%= button_to "Delete meal", meal, :method => :delete %>
+        <br></br> 
+
+        
+<% end %> 
+
+
+
+<%= link_to "Create a new meal", new_meal_path(:did => @diet.id)%>
+<br></br>
+<%= link_to "Create a new workout", new_workout_path %> 
+<br></br>
+<%= link_to "Log out", logout_path %>
+
