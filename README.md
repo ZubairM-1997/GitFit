@@ -5,6 +5,7 @@ This is an webapp I made in preparation for Flatiron School's project week for M
 To run this file
 1) Fork and Clone,
 2) Go to the directory where you saved this (via terminal),
-3) type "rails s" to boot up the server, 
-4) go to localhost:3000/new/users to sign up and use the app,
-5) Enjoy!
+3) type rails db:migrate and rails db:seed,
+4) type "rails s" to boot up the server, 
+5) go to localhost:3000/new/users to sign up and use the app,
+6) Enjoy!
