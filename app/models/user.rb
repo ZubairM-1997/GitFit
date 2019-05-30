@@ -90,6 +90,17 @@ class User < ApplicationRecord
             end 
     end 
 
+    def weight_diff 
+        if self.weight > self.goal_weight 
+            diff = self.weight - self.goal_weight 
+            return diff  
+        elsif self.weight < self.goal_weight 
+            diff = self.goal_weight - self.weight 
+            return diff 
+        else 
+            return "No difference calculated" 
+        end 
+    end 
 
 
 
