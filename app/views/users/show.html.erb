@@ -1,17 +1,32 @@
 <h1> Welcome to GitFit, <%= @user.name %> </h1>
-
+<br></br>
 
 <h2> An app that helps you get to your fitness goals efficiently as possible </h2>
 <h2> Please go to <%= @user.email %> to confirm your email address 
-
+<br></br>
 
 <h2> Your stats are currently <h2> 
+
+<h3> Gender:  <%= @user.gender %>  </h3>
 <h3> Weight:  <%= @user.weight %> kg </h3>
-<h3> Goal Weight: <%= @user.goal_weight %> kg </h3> 
 <h3> Height: <%= @user.height %> cm </h3>
-<h3> BMI: <%= @user.calculate_bmi %> kg/m^2 </h3> 
+<h3> Age:  <%= @user.age %>  </h3>
+<h3> BMI: <%= @user.calculate_bmi.round(2) %> kg/m2 </h3> 
+<h3> Result: <%= @user.determine_bmi %> </h3>
+
+<br></br>
+
+<h3> Goal Weight: <%= @user.goal_weight %> kg </h3> 
+<h3> Goal BMI: <%= @user.goal_bmi.round(2) %> kg/m^2 </h3>
+<h3> Weight Percentage Difference: <%= @user.percentage_difference.round(2) %> % </h3>
+
+<br></br>
+
 <h3> Result: <%= @user.determine_bmi %> </h3>
 <h3> You are currently <%= @user.weight - @user.goal_weight %> kilograms away from your goal </h3>
+
+<br></br>
+<br></br>
 
 <h2> Your current workouts: </h2> 
 <% @workouts.each do |workout| %>

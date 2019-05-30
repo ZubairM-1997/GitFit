@@ -49,6 +49,34 @@ class User < ApplicationRecord
 
     end 
 
+    def goal_bmi 
+        height = self.height.to_f / 100 
+        height_square = height * height 
+
+        self.goal_weight / height_square 
+    end 
+
+    def percentage_difference 
+        if self.goal_weight > self.weight 
+            increase = self.goal_weight - self.weight 
+            percentage = increase.to_f/self.weight * 100  
+            return percentage 
+
+        elsif self.goal_weight < self.weight 
+            decrease = self.weight - self.goal_weight
+            percentage = decrease.to_f/self.weight * 100 
+            return percentage 
+        
+        else 
+            return "No percentage difference" 
+        end 
+    end 
+        
+        
+
+   
+
+
     def determine_bmi 
         calculation = calculate_bmi 
             if calculation < 18 

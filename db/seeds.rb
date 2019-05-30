@@ -5,7 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+MuscleGroup.destroy_all 
+Workout.destroy_all 
+Diet.destroy_all
 
 biceps = MuscleGroup.create(muscle_name: "Biceps")
 triceps = MuscleGroup.create(muscle_name: "Triceps")
@@ -27,7 +29,8 @@ squats = Workout.create(name: "Squats", muscle_group_id: legs.id, sets: 5, reps:
 boxing = Workout.create(name: "Boxing", muscle_group_id: fullbody.id, sets: 5, reps: 5)
 
 
-keto = Diet.create(name: "Keto Diet")
-paleo = Diet.create(name: "Paleo Diet")
-vegan = Diet.create(name: "Vegetarian")
-therock = Diet.create(name: "The Rock's insane cheat day")
+keto = Diet.create(name: "Keto Diet", description: "High fat, adequate protein, low carbohydrate diet, used to control epilepsy, now used to stimulate fat loss")
+paleo = Diet.create(name: "Paleo Diet", description: "Predominant eating of foods presumed to have been available to humans during the Paleolithic era")
+vegan = Diet.create(name: "Vegetarian", description: "Abstaining from the consumption of meat but not necessarily abstaining from animal products")
+therock = Diet.create(name: "The Rock's insane cheat day", description: "Only do this if you're up for the challenge")
+fish = Diet.create(name: "Pescatarian", description: "the practice of adhering to a diet that incorporates seafood as the only source of meat in an otherwise vegetarian diet.")

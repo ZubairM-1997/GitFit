@@ -1,4 +1,5 @@
 <h1> You are now viewing all <%= @diet.name %> meals </h1>
+<li><%= @diet.description %></li>
 
 <% @meals.each do |meal| %>
         <h2> Name : <%= meal.name %> </h2>
@@ -18,4 +19,5 @@
 <%= link_to "Create a new workout", new_workout_path %> 
 <br></br>
 <%= link_to "Log out", logout_path %>
+
 
