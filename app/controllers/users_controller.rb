@@ -20,7 +20,9 @@ class UsersController < ApplicationController
     end 
 
     def show 
-        @user = User.find(params[:id])
+        
+        @user = current_user
+        
         @workouts = @user.workouts #all the workouts for that particular user
         @meals = @user.meals #all the meals for that particular user
 
