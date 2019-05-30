@@ -6,6 +6,7 @@
         <h3> Calories : <%= meal.calories %> </h3>
         <h3> Servings : <%= meal.serving%> </h3>
         <h3> Total Calories of Meal : <%= meal.calories * meal.serving %> </h3>
+        <h3> Ingredients: <%= meal.ingredients %> </h3>
         <%= button_to "Delete meal", meal, :method => :delete %>
         <br></br> 
 

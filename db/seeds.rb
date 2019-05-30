@@ -23,9 +23,7 @@ curls = Workout.create(name: "Bicep Curls", muscle_group_id: biceps.id, sets: 5,
 deadlift = Workout.create(name: "Deadlifts", muscle_group_id: back.id, sets: 5, reps: 5)
 bentoverrows = Workout.create(name: "Bent Over Rows", muscle_group_id: back.id, sets: 5, reps: 5)
 pullups = Workout.create(name: "Pull ups", muscle_group_id: back.id, sets: 5, reps: 8)
-
 squats = Workout.create(name: "Squats", muscle_group_id: legs.id, sets: 5, reps: 5)
-
 boxing = Workout.create(name: "Boxing", muscle_group_id: fullbody.id, sets: 5, reps: 5)
 
 
@@ -34,3 +32,4 @@ paleo = Diet.create(name: "Paleo Diet", description: "Predominant eating of food
 vegan = Diet.create(name: "Vegetarian", description: "Abstaining from the consumption of meat but not necessarily abstaining from animal products")
 therock = Diet.create(name: "The Rock's insane cheat day", description: "Only do this if you're up for the challenge")
 fish = Diet.create(name: "Pescatarian", description: "the practice of adhering to a diet that incorporates seafood as the only source of meat in an otherwise vegetarian diet.")
+

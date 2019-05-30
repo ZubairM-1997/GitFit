@@ -10,13 +10,16 @@ class QuizzesController < ApplicationController
                 flash[:success] = "Your answers have been saved"
                 redirect_to current_user 
             else 
-                render 'new '
+                render 'new'
             end 
         end 
 
     end 
 
+       
+
     private 
         def quiz_params
             params.require(:quiz).permit(:exercise_q, :membership_q, :training_q, :fruit)
+        end 
 end 

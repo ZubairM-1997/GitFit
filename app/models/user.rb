@@ -39,6 +39,14 @@ class User < ApplicationRecord
         end 
     end 
 
+    def sort_meals 
+        self.meals.sort_by {|meal| meal.calories}
+    end 
+
+    def map_meals 
+        sort_meals.map {|meal| meal.name}.join(", ")
+    end 
+
     def calculate_bmi
 
         height = self.height.to_f / 100 
@@ -70,10 +78,6 @@ class User < ApplicationRecord
             return "No percentage difference" 
         end 
     end 
-        
-        
-
-   
 
 
     def determine_bmi 

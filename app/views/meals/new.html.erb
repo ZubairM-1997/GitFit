@@ -19,6 +19,9 @@
     <%= f.label :serving, "Serving count:" %>
     <%= f.text_field :serving %>
 
+    <%= f.label :ingredients, "List of ingredients" %>
+    <%= f.text_field :ingredients %>
+
     
     <p> What diet is it? <%= f.collection_select :diet_id, Diet.all,:id,:name, include_blank: true, :selected => params[:did] %> </p> 
     <br></br>

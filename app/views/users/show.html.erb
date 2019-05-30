@@ -43,7 +43,8 @@
     <li> Meal Name: <%= meal.name %> </li>
     <li> Calories: <%= meal.calories %> </li>
     <li> Servings: <%= meal.serving %> </li>
-    <li> Total Calories of meal: <%= product = meal.calories * meal.serving %> </li>
+    <li> Ingredients: <%= meal.ingredients %> </li>
+    <li> Total calories: <%= product = meal.calories * meal.serving %> </li>
     <% sum += product %>
     <% product %>
     <br></br>
@@ -51,7 +52,7 @@
 <%end %>
 
 <h3> You have consumed <%= sum %> calories for the day. </h3>
-
+<h3> Meals sorted by calorie count: <%= @user.map_meals %>
 
 
 
@@ -60,7 +61,8 @@
 <h3> <%= link_to "What do you want to workout today?", muscle_groups_path %> </h3>
 <h3> <%= link_to "What diet do you want to follow?", diets_path %> </h3>
 
-<%= link_to "Questionairre", new_quiz_path %>
-<%= link_to "Edit your details", edit_user_path %>
+<%= link_to "Questionairre", new_quiz_path %> 
+<br></br>
+<%= link_to "Edit your details", edit_user_path(@user) %>
 <br></br>
 <%= link_to "Log out", logout_path %>

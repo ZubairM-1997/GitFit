@@ -24,6 +24,6 @@ class MealsController < ApplicationController
 
     private 
         def meals_params 
-            params.require(:meal).permit(:name, :calories, :diet_id, :user_id, :serving)
+            params.require(:meal).permit(:name, :calories, :diet_id, :user_id, :serving, :ingredients)
         end     
 end
