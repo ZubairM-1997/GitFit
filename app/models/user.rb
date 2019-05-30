@@ -1,13 +1,12 @@
 class User < ApplicationRecord
     has_many :userdiet 
     has_many :usermuscle
-    
     has_many :diets, through: :userdiet
-
     has_many :muscle_groups, through: :usermuscle
-
     has_many :workouts
     has_many :meals
+    has_many :userquiz 
+    has_many :quizzes, through: :userquiz 
     
     before_save { self.email = email.downcase }
     #before saving, the email is lowercased

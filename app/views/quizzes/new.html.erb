@@ -1,0 +1,22 @@
+<h1> Welcome to the GitFit Questionairre </h1> 
+<h2> Answer these questions honestly </h2>
+
+<%= form_for(@quiz) do |f| %>
+    <%= f.label :exercise_q, "How many times do you exercise in a week?" %>
+    <%= f.text_field :exercise_q %>
+    <br></br>
+
+    <%= f.label :membership_q, "How much do you spend on a gym membership in a month? £" %>
+    <%= f.text_field :membership_q %>
+    <br></br>
+
+    <%= f.label :training_q, "Do you prefer cardio or weight training?" %>
+    <%= f.text_field :training_q %>
+    <br></br>
+
+    <%= f.label :fruit, "Whats your favourite fruit?" %>
+    <%= f.text_field :fruit%>
+    <br></br>
+    <%= f.submit "Save my answers", class: "btn btn-primary" %>
+<% end %> 
+

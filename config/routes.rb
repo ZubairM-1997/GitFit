@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :diets
   resources :meals
   resources :workouts
+  resources :quizzes 
 
   get    '/login',   to: 'sessions#new', as: :login
   post   '/login',   to: 'sessions#create'
