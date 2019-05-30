@@ -7,6 +7,8 @@ class Meal < ApplicationRecord
 
     validates :serving, presence: true, numericality: {only_integer: true }
 
+    validates :ingredients, presence: true 
+
  
 
 
