@@ -19,12 +19,7 @@ fullbody = MuscleGroup.create(muscle_name: "Full Body")
 other = MuscleGroup.create(muscle_name: "Other")
 
 
-curls = Workout.create(name: "Bicep Curls", muscle_group_id: biceps.id, sets: 5, reps: 10)
-deadlift = Workout.create(name: "Deadlifts", muscle_group_id: back.id, sets: 5, reps: 5)
-bentoverrows = Workout.create(name: "Bent Over Rows", muscle_group_id: back.id, sets: 5, reps: 5)
-pullups = Workout.create(name: "Pull ups", muscle_group_id: back.id, sets: 5, reps: 8)
-squats = Workout.create(name: "Squats", muscle_group_id: legs.id, sets: 5, reps: 5)
-boxing = Workout.create(name: "Boxing", muscle_group_id: fullbody.id, sets: 5, reps: 5)
+
 
 
 keto = Diet.create(name: "Keto Diet", description: "High fat, adequate protein, low carbohydrate diet, used to control epilepsy, now used to stimulate fat loss")
