@@ -20,7 +20,7 @@
     <p> What muscle are you working out? <%= f.collection_select :muscle_group_id, MuscleGroup.all,:id,:muscle_name, include_blank: true, :selected => params[:mid]  %> </p> 
     <br></br>
 
-    <%= f.submit "Create my workout", class: "btn btn-primary" %>
+    <div class = "submit">  <%= f.submit "Create my workout", class: "btn btn-primary" %> </div>
  <% end %>
 
 

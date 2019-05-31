@@ -26,10 +26,10 @@
     <p> What diet is it? <%= f.collection_select :diet_id, Diet.all,:id,:name, include_blank: true, :selected => params[:did] %> </p> 
     <br></br>
 
-    <%= f.submit "Create my meal", class: "btn btn-primary" %>
+    <div class = "submit">   <%= f.submit "Create my meal", class: "btn btn-primary" %> </div>
  <% end %>
 
  
  <%= link_to "Create a new workout", new_workout_path %> 
- 
+ <br></br>
  <%= link_to "Log out", logout_path %>
